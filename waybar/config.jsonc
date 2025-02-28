@@ -1,0 +1,96 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top",
+    "position": "right",
+    "width": 24,
+    "height": "100%",
+
+    "modules-left": [
+        "custom/menu",
+        "custom/noti",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "pulseaudio/slider",
+        "pulseaudio",
+        "tray",
+        "network",
+        "custom/powermenu"
+    ],
+    // Modules configuration
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 150,
+        "orientation": "vertical",
+        "width": 18,
+    },
+
+    "custom/noti": {
+      "format": "󰂚 ",
+      "on-click": "swaync-client -op",
+      "tooltip": false
+    },
+    "custom/menu": {
+        "format": " ",
+        "on-click": "wofi --x 20 --y 20",
+        "tooltip": false
+    },
+
+    "custom/powermenu": {
+        "format": "⏻ ",
+        "on-click": "~/.config/wofi/powermenu.sh",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": false,
+         "warp-on-scroll": false,
+         "format": "{icon}",
+         "format-icons": {
+             "active": "<span color='#D79921'></span>",
+             "default": "<span color='#FBF1C7'></span>"
+         }
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "format": "{:%H\n%M}",  // \n para separar horas y minutos en líneas distintas
+        "tooltip": false,
+        "rotate": 0,            // No rotar el texto
+        "on-click": "swaymsg exec wofi --show drun"
+    },
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "   ",
+        "format-ethernet": "",
+        "tooltip-format": "",
+        "format-linked": "",
+        "format-disconnected": "⚠"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} ",
+        "format-bluetooth": "{icon}",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": "",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    }
+}

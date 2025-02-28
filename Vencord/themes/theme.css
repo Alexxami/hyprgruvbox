@@ -1,0 +1,116 @@
+/**
+ * @name midnight (catppuccin mocha)
+ * @description A dark, rounded discord theme. Based on catppuccin mocha theme (https://github.com/catppuccin/catppuccin).
+ * @author refact0r
+ * @version 1.6.2
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/flavors/midnight-catppuccin-mocha.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+ */
+
+/* import theme modules */
+@import url('https://refact0r.github.io/midnight-discord/src/main.css'); /* main theme css. */
+@import url('https://refact0r.github.io/midnight-discord/src/colors.css'); /* adds custom colors. remove this line to get default colors. */
+@import url('https://refact0r.github.io/midnight-discord/src/animations.css'); /* adds animations. remove to disable animations. */
+
+/* customize things here */
+:root {
+    /* font, change to '' for default discord font */
+    --font: 'figtree';
+
+    /* spacing between panels */
+    --gap: 12px;
+
+    /* thickness of unread messages divider and highlighted message borders */
+    --divider-thickness: 4px;
+
+    /* transitions */
+    --list-item-transition: 0.2s ease;
+
+    /* text colors */
+    --text-0: #7C6F64; /* text on colored elements */
+    --text-1: #7C6F64; /* other normally white text */
+    --text-2: #7C6F64; /* headings and important text */
+    --text-3: #7C6F64; /* normal text */
+    --text-4: #7C6F64; /* icon buttons and channels */
+    --text-5: #7C6F64; /* muted channels/chats and timestamps */
+
+    /* background and dark colors */
+    --bg-1: #FBF1C7; /* dark buttons when clicked */
+    --bg-2: #ebdbb2; /* dark buttons */
+    --bg-3: #FBF1C7; /* spacing, secondary elements */
+    --bg-4: #ebdbb2; /* main background color */
+    --hover: hsla(233, 12%, 39%, 0.1); /* channels and buttons when hovered */
+    --active: hsla(233, 12%, 39%, 0.2); /* channels and buttons when clicked or selected */
+    --active-2: hsla(233, 12%, 39%, 0.3); /* extra state for transparent buttons */
+    --message-hover: hsla(230, 0%, 0%, 0.1); /* messages when hovered */
+
+    /* accent colors */
+    --accent-1: var(--gruvbox-brown); /* links and other accent text */
+    --accent-2: var(--gruvbox-brown); /* small accent elements */
+    --accent-3: var(--gruvbox-brown); /* accent buttons */
+    --accent-4: var(--gruvbox-brown); /* accent buttons when hovered */
+    --accent-5: var(--gruvbox-brown); /* accent buttons when clicked */
+    --mention: linear-gradient(
+        to right,
+        color-mix(in hsl, var(--accent-2), transparent 90%) 60%,
+                               transparent
+    ); /* background of messages that mention you */
+    --mention-hover: linear-gradient(
+        to right,
+        color-mix(in hsl, var(--accent-2), transparent 95%) 60%,
+                                     transparent
+    ); /* background of messages that mention you when hovered */
+    --accent-new: var(--accent-2); /* stuff that's normally red like mute/deafen buttons */
+
+    /* status indicator colors */
+    --online: var(--green-2); /* change to #44a25b for default */
+    --dnd: var(--red-2); /* change to #d83a42 for default */
+    --idle: var(--yellow-2); /* change to #c99656 for default */
+    --streaming: var(--gruvbox-brown); /* change to #593695 for default */
+    --offline: var(--text-4); /* change to #83838b for default offline color */
+
+    /* border colors */
+    --border-light: hsl(233, 12%, 39%, 0.1); /* light border color */
+    --border: hsl(233, 12%, 39%, 0.2); /* normal border color */
+    --button-border: hsl(0, 0%, 100%, 0.1); /* neutral border color of buttons */
+
+    /* base colors */
+    --red-1: #CC241D;
+    --red-2: #CC241D;
+    --red-3: #CC241D;
+    --red-4: #CC241D;
+    --red-5: #CC241D;
+    --red-gruv: #CC241D;
+
+    --green-1: #98971A;
+    --green-2: #98971A;
+    --green-3: #98971A;
+    --green-4: #98971A;
+    --green-5: #98971A;
+
+    --blue-gruv: #B16286;
+    --blue-1: var(--blue-gruv) ;
+    --blue-2: var(--blue-gruv) ;
+    --blue-3: var(--blue-gruv) ;
+    --blue-4: var(--blue-gruv) ;
+    --blue-5: var(--blue-gruv) ;
+
+    --yellow-gruv: #458588;
+    --yellow-1: var(--yellow-gruv);
+    --yellow-2: var(--yellow-gruv);
+    --yellow-3: var(--yellow-gruv);
+    --yellow-4: var(--yellow-gruv);
+    --yellow-5: var(--yellow-gruv);
+
+    --purple-gruv: #689D6A;
+    --purple-1: var(--purple-gruv);
+    --purple-2: var(--purple-gruv);
+    --purple-3: var(--purple-gruv);
+    --purple-4: var(--purple-gruv);
+    --purple-5: var(--purple-gruv);
+
+    --gruvbox-brown: #D79921;
+}

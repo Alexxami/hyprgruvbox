@@ -1,0 +1,187 @@
+/* Estilos para la barra principal */
+#waybar {
+color: #D79921;
+border: 2px solid #D79921; /* Borde de 2px */
+border-radius: 10px; /* Bordes redondeados */
+background-color: #FBF1C7; /* Fondo de la barra */
+}
+#pulseaudio{
+font-size: 24px;                  /* Tamaño de la fuente */
+font-weight: bold;                /* Grosor de la fuente */
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+background-color: #ebdbb2;
+margin-left: 5px;
+margin-bottom: 5px;
+margin-right: 10px;
+margin-top: 4px;
+border: none;
+background-color: #ebdbb2;
+margin-left: 5px;
+margin-bottom: 4px;
+margin-right: 5px;
+margin-top: 0px;
+border: none;
+}
+/* Aplica margen a los módulos para simular padding */
+#workspaces{
+  border-radius: 10px;
+  background-color: #ebdbb2;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-top: 4px;
+  border: none;
+  padding-right: 2px;
+}.
+
+#network{
+font-family: "myfont";
+font-size: 24px;                  /* Tamaño de la fuente */
+font-weight: bold;                /* Grosor de la fuente */
+border-radius: 10px;
+background-color: #ebdbb2;
+margin-left: 5px;
+margin-bottom: 8px;
+margin-right: 5px;
+margin-top: 8px;
+border: none;
+padding-top: 5px;
+padding-bottom: 6px;
+margin: 5px;
+}
+#tray{
+border-radius: 10px;
+background-color: #ebdbb2;
+margin-left: 5px;
+margin-bottom: 5px;
+padding-top: 10px;
+padding-bottom: 10px;
+margin-right: 5px;
+margin-top: 5px;
+border: none;
+}
+
+#clock,
+#battery,
+#network {
+margin: 5px; /* Espacio alrededor de los módulos */
+}
+/* Estilo para el workspace activo (focused) */
+
+#clock {
+font-family: "NombreDeLaFuente";  /* Cambia "NombreDeLaFuente" por la fuente que desees */
+font-size: 24px;                  /* Tamaño de la fuente */
+font-weight: bold;                /* Grosor de la fuente */
+color: #D79921;                   /* Color del texto */
+border-radius: 10px;
+background-color: #ebdbb2;
+margin-left: 5px;
+margin-bottom: 5px;
+margin-right: 5px;
+margin-top: 4px;
+border: none;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+#custom-menu {
+font-size: 24px;                  /* Tamaño de la fuente */
+font-weight: bold;                /* Grosor de la fuente */
+color: #D79921;                   /* Color del texto */
+border-radius: 10px;
+background-color: #ebdbb2;
+margin-left: 6px;
+margin-bottom: 5px;
+margin-right: 6px;
+margin-top: 5px;
+border: none;
+padding-top: 5px;
+padding-left: 6px;
+padding-bottom: 5px;
+}
+
+#custom-noti {
+font-size: 20px;                  /* Tamaño de la fuente */
+font-weight: bold;                /* Grosor de la fuente */
+color: #D79921;                   /* Color del texto */
+border-radius: 10px;
+background-color: #ebdbb2;
+margin-left: 6px;
+margin-bottom: 5px;
+margin-right: 6px;
+margin-top: 5px;
+border: none;
+padding-top: 5px;
+padding-left: 6px;
+padding-bottom: 5px;
+}
+
+#custom-powermenu {
+font-size: 18px;                  /* Tamaño de la fuente */
+font-weight: bold;                /* Grosor de la fuente */
+color: #D79921;                   /* Color del texto */
+border-radius: 10px;
+background-color: #ebdbb2;
+margin-left: 6px;
+margin-bottom: 5px;
+margin-right: 6px;
+margin-top: 5px;
+border: none;
+padding-top: 5px;
+padding-left: 5px;
+padding-bottom: 5px;
+}
+
+#pulseaudio-slider {
+min-height: 10px;
+padding-top: 5px;
+min-width: 10px;
+opacity: 1;
+background-image: none;
+box-shadow: none;
+color: #D79921;
+border-top-right-radius: 10px;
+border-top-left-radius: 10px;
+background-color: #ebdbb2;
+margin-left: 5px;
+margin-bottom: 5px;
+margin-right: 5px;
+margin-top: 4px;
+border: none;
+background-color: #ebdbb2;
+margin-left: 5px;
+margin-bottom: 0px;
+margin-right: 5px;
+margin-top: 4px;
+border: none;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+#pulseaudio-slider slider {
+padding: 0px;
+background: transparent; /* Color del slider (rojo) */
+border: none;
+border-radius: 0px;
+margin-left: 5px;
+margin-bottom: 0px;
+margin-right: 0px;
+margin-top: 4px;
+}
+
+#pulseaudio-slider trough {
+min-width: 18px;
+min-height: 60px;
+background-image: linear-gradient(to right, #FBF1C7, #FBF1C7);
+border: none;
+border-radius: 5px;
+}
+
+#pulseaudio-slider highlight {
+min-width: 24px;
+min-height: 0px;
+background-image: linear-gradient(to right, #D79921, #D79921); /* Color rojo */
+border: none;
+border-radius: 5px;
+}

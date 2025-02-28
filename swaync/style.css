@@ -1,0 +1,234 @@
+@define-color cc-bg #FBF1C7;
+
+@define-color noti-text-color #3C3836;
+@define-color noti-border-color #D79921;
+@define-color noti-bg #FBF1C7;
+
+/*el borde del putisimo switch*/
+@define-color noti-bg-hover #D79921;
+
+/*yo que coño sé*/
+@define-color noti-bg-focus #FBF1C7;
+
+/*el boton del switch cuando esta apagado*/
+@define-color noti-close-bg #FBF1C7;
+
+/*el boton del switch cuando esta encendido*/
+@define-color noti-close-bg-hover #FBF1C7;
+
+/*el switch ese de los cojones */
+@define-color bg-selected  #FBF1C7;
+
+* {
+    font-family: "Source Sans Pro";
+    font-size:   15px;
+    color: #3C3836;
+    border: 2px;
+}
+
+.notification-row {
+  outline: none;
+}
+
+.notification-row:focus,
+.notification-row:hover {
+  background: rgb(69, 71, 90);
+}
+
+.notification {
+  border-radius: 12px;
+  margin: 6px 12px;
+  padding: 0;
+}
+
+.critical {
+  background: @bg-selected;
+  padding: 6px;
+  border-radius: 12px;
+  border: 2px;
+}
+
+/* Uncomment to enable specific urgency colors
+.low {
+  background: yellow;
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.normal {
+  background: green;
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.critical {
+  background: red;
+  padding: 6px;
+  border-radius: 12px;
+}
+*/
+
+.notification-content {
+  background: transparent;
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.close-button {
+  background: @noti-close-bg;
+  color: @noti-text-color;
+  text-shadow: none;
+  padding: 0;
+  border-radius: 100%;
+  margin-top: 10px;
+  margin-right: 16px;
+  box-shadow: none;
+  border: none;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.close-button:hover {
+  box-shadow: none;
+  background: @noti-close-bg-hover;
+  transition: all 0.15s ease-in-out;
+  border: none;
+}
+
+.notification-default-action,
+.notification-action {
+  padding: 4px;
+  margin: 0;
+  box-shadow: none;
+  background: @noti-bg;
+  border: 2px solid @noti-border-color;
+  color: white;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+  -gtk-icon-effect: none;
+  background: @noti-bg;
+}
+
+.notification-default-action {
+  border-radius: 12px;
+}
+
+/* When alternative actions are visible */
+.notification-default-action:not(:only-child) {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.notification-action {
+  border-radius: 0px;
+  border-top: none;
+  border-right: none;
+}
+
+/* add bottom border radius to eliminate clipping */
+.notification-action:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.notification-action:last-child {
+  border-bottom-right-radius: 10px;
+  border-right: 2px solid @noti-border-color;
+}
+
+.image {
+}
+
+.body-image {
+  margin-top: 6px;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.summary {
+  color: @noti-text-color;
+  text-shadow: none;
+}
+
+.time {
+  color: @noti-text-color;
+  text-shadow: none;
+  margin-right: 18px;
+}
+
+.body {
+  background: transparent;
+  color: @noti-text-color;
+  text-shadow: none;
+}
+
+/* The "Notifications" and "Do Not Disturb" text widget */
+.top-action-title {
+  color: @noti-text-color;
+  text-shadow: none;
+}
+
+.control-center-clear-all {
+  color: @noti-text-color;
+  text-shadow: none;
+  background: @cc-bg;
+  border: 2px solid @noti-border-color;
+  box-shadow: none;
+  border-radius: 10px;
+}
+
+.control-center-clear-all:hover {
+  background: @noti-bg-hover;
+}
+
+.control-center-dnd {
+  border-radius: 12px;
+  background: @noti-bg;
+  border: 2px solid @noti-border-color;
+  box-shadow: none;
+}
+
+.control-center-dnd:checked {
+  background: @bg-selected;
+}
+
+.control-center-dnd slider:hover {
+  background: @noti-close-bg-hover;
+}
+
+.control-center-dnd slider {
+  background: @noti-bg-hover;
+  border-radius: 12px;
+}
+
+/* The .control-center Window.
+ * Can't apply padding and margin so may be easier to use "> box" instead
+ */
+.control-center {
+  background: @cc-bg;
+  border: 2px solid @noti-border-color;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+
+}
+
+/* The first control-center child. May be easier to style this than .control-center */
+.control-center > box {
+
+}
+
+.control-center-list {
+  background: transparent;
+}
+
+.floating-notifications {
+  background: transparent;
+}
+
+/* Window behind control center and on all other monitors */
+.blank-window {
+  background: transparent;
+}
